@@ -1,3 +1,5 @@
+[Kibana创建index及监控pod](https://www.qikqiak.com/post/install-efk-stack-on-k8s/)
+
 部署EFK  
 =======
 1、下载yaml文件  
@@ -75,6 +77,11 @@ daemonset.apps/fluentd-es-v2.2.1 created
 deployment.apps/kibana-logging created
 service/kibana-logging created
 ```  
+
+**Kibana的pod启动健康检测会过不去，报错503 "Unable to revive connection: http://elasticsearch:9200/" 
+需要在kibana-deployment.yaml 中的 spec.containers.env 下增加 - name: ELASTICSEARCH_URL
+                                                                value: http://elasticsearch-logging:9200
+可以用我上面的kibana-deployment.yaml**
 
 6、查看pod状态：
 ```
