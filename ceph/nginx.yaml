@@ -1,0 +1,50 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: nginx-rdb-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: rook-ceph-block #声明需要使用的storageclass
+  resources:
+    requests:
+      storage: 20Mi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+        logging: "true"
+    spec:
+      containers:
+      - image: nginx
+        imagePullPolicy: IfNotPresent
+        name: nginx
+        volumeMounts:
+        - name: ceph-rdb-nginx
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: ceph-rdb-nginx
+        persistentVolumeClaim:
+          claimName: nginx-rdb-claim  
+      
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: nginx  
