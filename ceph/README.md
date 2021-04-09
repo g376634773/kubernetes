@@ -11,5 +11,6 @@ yaml文件下载 <https://github.com/rook/rook/tree/release-1.1/cluster/examples
 kubectl create -f operator.yaml
 kubectl create -f common.yaml
 
-
-2、下
+kubectl get pod -n rook-ceph 会看到启动了一个operator的pod
+2、下载cluster.yaml
+```
