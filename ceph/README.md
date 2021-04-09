@@ -12,5 +12,6 @@ kubectl create -f operator.yaml
 kubectl create -f common.yaml
 
 kubectl get pod -n rook-ceph 会看到启动了一个operator的pod
+
 2、下载cluster.yaml
 ```
