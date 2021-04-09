@@ -6,7 +6,7 @@ rook release-1.1
 
 yaml文件下载 <https://github.com/rook/rook/tree/release-1.1/cluster/examples/kubernetes/ceph>
 
-# ceph集群最少需要三节点，否则ceph -s 查看集群状态是不正常的，部署ceph前服务器上需要有一块未格式化、未分区的盘，否则osd无法初始化，osd的pod不会启动，ceph -s 查看到的osd数量会为0
+## ceph集群最少需要三节点，否则ceph -s 查看集群状态是不正常的，部署ceph前服务器上需要有一块未格式化、未分区的盘，否则osd无法初始化，osd的pod不会启动，ceph -s 查看到的osd数量会为0
 
 1、下载operator.yaml和common.yaml
 ```
