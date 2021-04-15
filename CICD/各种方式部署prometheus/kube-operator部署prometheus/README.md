@@ -82,11 +82,10 @@ mysql_up 1
 ```
 
 4、登陆prometheus
-```
-![image](https://user-images.githubusercontent.com/51428270/114814729-5ee4ef00-9de7-11eb-964c-ca01673fed9b.png)
-```
+
+![image](https://user-images.githubusercontent.com/51428270/114815144-35789300-9de8-11eb-813e-b8221327ee1a.png)
+
 5、登陆grafana
-```
 添加数据源
 ![image](https://user-images.githubusercontent.com/51428270/114814788-820f9e80-9de7-11eb-942b-b181d649e354.png)
 
@@ -94,7 +93,5 @@ mysql_up 1
 ![image](https://user-images.githubusercontent.com/51428270/114814832-9ce21300-9de7-11eb-9a37-0aa7ee02c63f.png)
 
 查看dashboard就可以看到mysql的数据库了
-![image](https://user-images.githubusercontent.com/51428270/114814989-e4689f00-9de7-11eb-8c06-c8c5c49e27f8.png)
-```
-![image](https://user-images.githubusercontent.com/51428270/114815062-02ce9a80-9de8-11eb-925d-25f359a95dc1.png)
 
+![image](https://user-images.githubusercontent.com/51428270/114814989-e4689f00-9de7-11eb-8c06-c8c5c49e27f8.png)
