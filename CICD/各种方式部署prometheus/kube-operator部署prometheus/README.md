@@ -1,9 +1,12 @@
 # kube-operator部署prometheus
 
-1、github官网上克隆
+1、github官网上克隆，
 ```
 gitclone https://github.com/prometheus-operator/kube-prometheus.git
-选择与自己k8s集群版本适合的operator版本，我得集群是1.15.1的
+```
+2、选择与自己k8s集群版本适合的operator版本，我得集群是1.15.1的，使用的是release-0.3
+```
+查看分支
 [root@master manifests]# git branch -a
   main
 * release-0.3
@@ -17,7 +20,11 @@ gitclone https://github.com/prometheus-operator/kube-prometheus.git
   remotes/origin/release-0.6
   remotes/origin/release-0.7
 
-
+切换版本branch
+git checkout remotes/origin/release-0.3
+```
+3、进入目录并启动
+```
 cd ./kube-prometheus/manifests
 kubectl apply -f .
 [root@master manifests]# kubectl get pod -n monitoring 
@@ -37,3 +44,5 @@ prometheus-k8s-0                      3/3     Running            19         3d
 prometheus-k8s-1                      3/3     Running            19         3d
 prometheus-operator-6685db5c6-lkmx4   1/1     Running            21         41d
 ```
+4、登陆
+![image](https://user-images.githubusercontent.com/51428270/114812889-820d9f80-9de3-11eb-9f58-c009c2e1e350.png)
