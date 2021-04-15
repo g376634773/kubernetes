@@ -96,4 +96,5 @@ mysql_up 1
 查看dashboard就可以看到mysql的数据库了
 ![image](https://user-images.githubusercontent.com/51428270/114814989-e4689f00-9de7-11eb-8c06-c8c5c49e27f8.png)
 ```
+![image](https://user-images.githubusercontent.com/51428270/114815062-02ce9a80-9de8-11eb-925d-25f359a95dc1.png)
 
